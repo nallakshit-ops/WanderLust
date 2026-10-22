@@ -1,0 +1,146 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+
+        <h3 class="mb-4">Add New Listing</h3>
+
+        <form
+            method="POST"
+            action="/listings"
+            class="needs-validation"
+            novalidate
+            enctype="multipart/form-data"
+        >
+
+            <!-- Title -->
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+
+                <input
+                    name="listing[title]"
+                    id="title"
+                    placeholder="Enter Property Name"
+                    type="text"
+                    class="form-control"
+                    required
+                >
+
+                <div class="valid-feedback">
+                    Title looks good!!
+                </div>
+
+                <div class="invalid-feedback">
+                    Please enter a property title.
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="mb-3">
+                <label for="description" class="form-label">
+                    Description
+                </label>
+
+                <textarea
+                    name="listing[description]"
+                    id="description"
+                    placeholder="Enter property description"
+                    class="form-control"
+                    rows="4"
+                    required
+                ></textarea>
+
+                <div class="invalid-feedback">
+                    Please enter a description.
+                </div>
+            </div>
+
+            <!-- Image URL -->
+            <div class="mb-3">
+                <label for="image" class="form-label">
+                    Upload Image File
+                </label>
+
+                <input
+                    name="listing[image]"
+                    id="image"
+                    type="file"
+                    class="form-control"
+                >
+
+                <div class="invalid-feedback">
+                    Upload a valid image.
+                </div>
+            </div>
+
+            <!-- Price and Country -->
+            <div class="row">
+
+                <div class="mb-3 col-md-4">
+                    <label for="price" class="form-label">
+                        Price (₹)
+                    </label>
+
+                    <input
+                        name="listing[price]"
+                        id="price"
+                        placeholder="2000"
+                        type="number"
+                        class="form-control"
+                        required
+                    >
+
+                    <div class="invalid-feedback">
+                        Please enter a price greater than zero.
+                    </div>
+                </div>
+
+                <div class="mb-3 col-md-8">
+                    <label for="country" class="form-label">
+                        Country
+                    </label>
+
+                    <input
+                        name="listing[country]"
+                        id="country"
+                        placeholder="India"
+                        type="text"
+                        class="form-control"
+                        required
+                    >
+
+                    <div class="invalid-feedback">
+                        Please enter a country.
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Location -->
+            <div class="mb-3">
+                <label for="location" class="form-label">
+                    Location
+                </label>
+
+                <input
+                    name="listing[location]"
+                    id="location"
+                    placeholder="Hyderabad, Telangana"
+                    type="text"
+                    class="form-control"
+                    required
+                >
+
+                <div class="invalid-feedback">
+                    Please enter a location.
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-dark">
+                Add Listing
+            </button>
+
+        </form>
+
+    </div>
+</div>

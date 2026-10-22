@@ -1,0 +1,247 @@
+/* ========================================
+   GENERAL LAYOUT
+======================================== */
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-container > .container {
+    flex: 1;
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+    min-height: 5rem;
+    background-color: #f8f9fa !important;
+    padding: 0.8rem 2rem;
+}
+
+/* Compass Logo */
+.fa-compass {
+    color: #fe424d !important;
+    font-size: 2.2rem;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: #334155 !important;
+    font-size: 1.05rem;
+    margin-left: 1rem;
+}
+
+/* Active Navbar Link */
+.navbar-nav .nav-link.active {
+    color: #fe424d !important;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+    background-color: #f8f9fa !important;
+    color: #333333 !important;
+    padding: 1.8rem 1rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+/* Social Media Icons */
+.f-info-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.f-info-socials a {
+    color: #333333 !important;
+    font-size: 1.4rem;
+    transition: color 0.2s ease;
+}
+
+.f-info-socials a:hover {
+    color: #fe424d !important;
+}
+
+/* Copyright */
+.f-info-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #555555 !important;
+}
+
+/* Footer Links */
+.f-info-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.f-info-links a {
+    color: #333333 !important;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.f-info-links a:hover {
+    color: #fe424d !important;
+    text-decoration: underline;
+}
+
+
+/* ========================================
+   LISTING CARDS - INDEX.EJS
+   These styles do not affect show-card.
+======================================== */
+
+.card:not(.show-card) {
+    width: 100%;
+    height: 25rem !important;
+    border: none !important;
+}
+
+/* Listing Card Images */
+.card:not(.show-card) .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Listing Card Body */
+.card:not(.show-card) .card-body {
+    padding: 0 !important;
+}
+
+/* Listing Card Text */
+.card:not(.show-card) .card-text {
+    font-weight: 400;
+}
+
+/* Listing Card Links */
+.card:not(.show-card) a {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+/* Listing Card Hover Effect */
+.card:not(.show-card):hover {
+    transform: translateY(-7px);
+}
+
+
+/* ========================================
+   SHOW PAGE CARD - SHOW.EJS
+======================================== */
+
+/* Main Show Card */
+.show-card {
+    width: 85%;
+    margin: 0 auto !important;
+    height: auto !important;
+    border: 1px solid #e5e5e5 !important;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+}
+
+/* Show Page Image */
+.show-img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Show Page Card Body */
+.show-card-body {
+    padding: 1rem !important;
+    height: auto;
+}
+
+/* Show Page Title */
+.show-card-title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Show Page Details */
+.show-card-body .card-text {
+    color: #444444;
+    line-height: 1.7;
+    margin-bottom: 0.8rem;
+}
+
+/* Show Page Action Buttons */
+.show-card-body .d-flex {
+    flex-wrap: wrap;
+}
+
+
+/* ========================================
+   RESPONSIVE STYLES
+======================================== */
+
+/* Tablets and Smaller Screens */
+@media (max-width: 767px) {
+
+    .navbar {
+        padding: 0.8rem 1rem;
+    }
+
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        padding: 0.7rem 0;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 576px) {
+
+    .site-footer {
+        padding: 1.5rem 1rem;
+    }
+
+    .f-info-socials {
+        gap: 1.2rem;
+    }
+
+    /* Show Page Image */
+    .show-img {
+        height: 220px;
+    }
+
+    /* Show Page Card Body */
+    .show-card-body {
+        padding: 1rem !important;
+    }
+}
+.card-review{
+    border : 1px solid black;
+    border-radius: 5px;
+}
+
+.map {
+    height: 400px;
+    width: 80vh;
+}
